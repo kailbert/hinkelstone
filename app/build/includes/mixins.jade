@@ -1,0 +1,78 @@
+//- Date
+	Usage: +date()
+mixin date()
+	-function prettyDate(){
+		//if it's already a date object and not a string you don't need this line:
+		-var date = new Date();
+		-var d = date.getDate();
+		-var monthNames = [ "Januar", "Febuary", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
+		-var m = monthNames[date.getMonth()];
+		-var y = date.getFullYear();
+		-return d+' '+m+' '+y;
+	-}
+	span #{prettyDate()}
+
+//- Coyright
+	Usage: +copyright()
+mixin copyright(text)
+	span &copy; #{new Date().getFullYear()} #{text} 
+
+//- Image
+	Usage: +image("picture.jpg", "This is a caption")
+mixin imagewithlink(filename, caption)
+	- var path = permalink + "assets/img/"
+	a(href=path + filename).image
+		img.image(src=path + filename)
+	if caption
+		figcaption!=caption
+
+mixin image(filename, caption)
+	- var path = permalink + "assets/img/"
+	img.image(src=path + filename)
+	if caption
+		figcaption!=caption
+//- Input field
+	Usage: +input("Type something here...")
+	CSS: .input
+	placeholder - [string] placeholder to be show if field is empty
+	value       - [string] optional default value of field
+//- mixin input(placeholder, value)
+//- 	input.input(placeholder=placeholder value=value)&attributes(attributes)
+
+//- YouTube Embed
+	Usage: +youtube("DLzxrzFCyOs", "4x3")
+mixin youtube(id)
+	.video-embed
+		iframe(src="https://www.youtube.com/embed/" + id frameborder="0" allowfullscreen)
+mixin vimeo(id)
+	.video-embed
+		iframe(src="https://player.vimeo.com/video/" + id + "?autoplay=1&color=fec52e&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen)
+//- Repeat a block without writing inline JS
+mixin times(limit)
+	- for (var i = 1; i <= limit; i++) {
+		block
+	- }
+//- Blockqoute
+	usage: +quote("i am cool","Sean")
+mixin quote(quote, autor)
+	blockquote "#{quote}"  
+		h4 #{autor}	
+
+//- logo
+	usage: +logo("yellow")
+mixin logo(color)
+	a(href=permalink)
+		.logo
+			img(src=permalink + "assets/img/logo-nav.png")
+//- logo
+	usage: +logo("yellow")
+mixin logo-icon(color)
+	a(href=permalink)
+		.logo-icon
+			img(src=permalink + "assets/img/logo-icon.png")
+
+mixin icon(icon)
+	svg.icon #[use(xlink:href='#'+icon)]
+mixin grid()
+	.grid
+

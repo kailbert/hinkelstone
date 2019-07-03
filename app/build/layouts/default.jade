@@ -1,0 +1,13 @@
+//- default.jade
+include /build/includes/vars.jade
+include /build/includes/mixins.jade
+include /build/includes/vendor.jade
+
+doctype html
+html(lang="en")
+	include /build/includes/head.jade
+	body
+		.injecticons
+			include /assets/icons/symbol/svg/sprite.symbol.svg
+		block content
+		+vendorFooter()

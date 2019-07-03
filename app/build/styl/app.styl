@@ -1,0 +1,223 @@
+// Assetpath relativ
+$assetspath = "../../assets"
+
+// Colors
+my-colors = {
+	bg: #0B011E
+	text: #FECA74
+}
+for name, color in my-colors
+	define('$'+name color)
+
+// BREAKPOINTS ⚡
+$bp1=769px
+$bp2=1380px
+bp(var)
+	@media screen and (max-width:var)
+		{block}
+$pagewidth = 1440px
+
+loop()
+	for i in (1..10)
+		&:nth-child({i})
+			animation-delay (166ms * i)
+			
+@import 'modules/_reset'
+// @import 'modules/_grid'
+@import 'modules/_typography'
+// @import 'modules/_iconography'
+// @import 'modules/_animation'
+.injecticons
+	height 0
+body
+	background $bg
+	color $text
+	-moz-font-feature-settings "liga=1, dlig=1"
+	-ms-font-feature-settings "liga", "dlig"
+	-webkit-font-feature-settings "liga", "dlig"
+	-o-font-feature-settings "liga", "dlig"
+	font-feature-settings "liga"
+	// font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+h1,h2,h3,h4,h5
+	color $text
+	bold()
+img
+	display block
+	width 100%
+	max-width 100%
+heroheight()
+	height 100vw
+	+bp($bp1)
+		height 180vw
+.hero
+	min-height 100%
+	heroheight()
+	position relative
+	overflow hidden
+	background-color #472776
+	.bg
+		background-image url($assetspath/img/bg.jpg)
+		background-size 100% auto
+		background-position center top
+		background-repeat no-repeat
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+	.logo
+		position relative
+		top 15vh
+		max-width 520px
+		width 65%
+		padding-bottom 2px
+		margin 0 auto
+		z-index 103
+	.layer1
+		background-image url($assetspath/img/layer1.png)
+		background-position center bottom
+		background-repeat no-repeat
+		background-size cover
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+	.layer2
+		background-image url($assetspath/img/layer2.png)
+		background-position center bottom
+		background-repeat no-repeat
+		background-size cover
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+	.layer3
+		background-image url($assetspath/img/layer3.png)
+		background-position center bottom
+		background-repeat no-repeat
+		background-size cover
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+	.clouds
+		background-image url($assetspath/img/clouds.png)
+		background-position center top
+		background-repeat no-repeat
+		background-size contain
+		width 100%
+		height 100%
+		position absolute
+		top 30%
+		left 0
+	.ball1
+		background-image url($assetspath/img/ball1.png)
+		background-position left top
+		background-repeat no-repeat
+		background-size contain
+		width 140px
+		height @width
+		position absolute
+		left 0
+		top 10vh
+		z-index 2
+	.ball2
+		background-image url($assetspath/img/ball2.png)
+		background-position center center
+		background-repeat no-repeat
+		background-size contain
+		width 80px
+		height @width
+		+bp($bp1)
+			width 30px
+			height @width
+		position absolute
+		right 10%
+		top 40vh
+		z-index 2
+	.ball3
+		background-image url($assetspath/img/ball3.png)
+		background-position center center
+		background-repeat no-repeat
+		background-size contain
+		width 40px
+		height @width
+		position absolute
+		left 20%
+		top 60vh
+		z-index 2
+	.bats
+		background-image url($assetspath/img/bats.png)
+		background-position center center
+		background-repeat no-repeat
+		background-size contain
+		width 120px
+		height @width
+		position absolute
+		right 15%
+		top 50vh
+		z-index 1
+	.fog
+		background-image url($assetspath/img/fog.png)
+		background-position center top
+		background-repeat no-repeat
+		background-size cover
+		width 100%
+		height 100%
+		position absolute
+		bottom 0
+		left 0
+	.stone
+		background-image url($assetspath/img/stone.png)
+		background-position center top
+		+bp($bp1)
+			background-position center 50vw
+		background-repeat no-repeat
+		background-size contain
+		width 100%
+		height 100%
+		position absolute
+		bottom 0
+		left 0
+		z-index 100
+.hr
+	margin-top -70px
+	height 70px
+	background-image linear-gradient(to bottom, transparent, $bg)
+	z-index 105
+	position relative
+.lineup
+	max-width 1220px
+	padding 40px
+	+bp($bp1)
+		padding 20px
+	text-align center
+	margin 0 auto 
+	z-index 102
+	position relative
+	h2
+		font-size 3vw
+		line-height 2
+		color lighten(#7F3AAF,15%)
+		text-transform uppercase
+		letter-spacing 1vw
+	.margin
+		margin-top 40px
+	ul
+		li
+			list-style-type none
+			font-size 6vw
+			line-height 1
+			text-transform uppercase
+			letter-spacing 1vw
+		li.small
+			font-size 2.6vw
+			margin-bottom 1vw
+	.checkback
+		margin-top 40px
+		color lighten(#7F3AAF,15%)
+		font-size 13px
+		letter-spacing 1px

@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 1.6em;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+progress {
+  vertical-align: baseline;
+}
+template,
+[hidden] {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline-width: 0;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+  display: block;
+  max-width: 100%;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+optgroup {
+  font-weight: bold;
+}
+button,
+input,
+select {
+  overflow: visible;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+button,
+select {
+/* 1 */
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+[disabled] {
+  cursor: default;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+video::-webkit-media-controls {
+  display: none !important;
+}
+@font-face {
+  font-family: DINNextLTPro-Black;
+  src: url("../../assets/fonts/DINNextLTPro-Black.woff") format('woff'), url("../../assets/fonts/DINNextLTPro-Black.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'DINNextLTPro-Black';
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'DINNextLTPro-Black';
+  font-weight: normal;
+}
+p + p {
+  margin-top: 1.6rem;
+}
+.injecticons {
+  height: 0;
+}
+body {
+  background: #0b011e;
+  color: #feca74;
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga";
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #feca74;
+}
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.hero {
+  min-height: 100%;
+  height: 100vw;
+  position: relative;
+  overflow: hidden;
+  background-color: #472776;
+}
+@media screen and (max-width: 769px) {
+  .hero {
+    height: 180vw;
+  }
+}
+.hero .bg {
+  background-image: url("../../assets/img/bg.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero .logo {
+  position: relative;
+  top: 15vh;
+  max-width: 520px;
+  width: 65%;
+  padding-bottom: 2px;
+  margin: 0 auto;
+  z-index: 103;
+}
+.hero .layer1 {
+  background-image: url("../../assets/img/layer1.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero .layer2 {
+  background-image: url("../../assets/img/layer2.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero .layer3 {
+  background-image: url("../../assets/img/layer3.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero .clouds {
+  background-image: url("../../assets/img/clouds.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.hero .ball1 {
+  background-image: url("../../assets/img/ball1.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  z-index: 2;
+}
+.hero .ball2 {
+  background-image: url("../../assets/img/ball2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 10%;
+  top: 40vh;
+  z-index: 2;
+}
+@media screen and (max-width: 769px) {
+  .hero .ball2 {
+    width: 30px;
+    height: 30px;
+  }
+}
+.hero .ball3 {
+  background-image: url("../../assets/img/ball3.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 20%;
+  top: 60vh;
+  z-index: 2;
+}
+.hero .bats {
+  background-image: url("../../assets/img/bats.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 15%;
+  top: 50vh;
+  z-index: 1;
+}
+.hero .fog {
+  background-image: url("../../assets/img/fog.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.hero .stone {
+  background-image: url("../../assets/img/stone.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+@media screen and (max-width: 769px) {
+  .hero .stone {
+    background-position: center 50vw;
+  }
+}
+.hr {
+  margin-top: -70px;
+  height: 70px;
+  background-image: linear-gradient(to bottom, transparent, #0b011e);
+  z-index: 105;
+  position: relative;
+}
+.lineup {
+  max-width: 1220px;
+  padding: 40px;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 102;
+  position: relative;
+}
+@media screen and (max-width: 769px) {
+  .lineup {
+    padding: 20px;
+  }
+}
+.lineup h2 {
+  font-size: 3vw;
+  line-height: 2;
+  color: #944ec4;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+}
+.lineup .margin {
+  margin-top: 40px;
+}
+.lineup ul li {
+  list-style-type: none;
+  font-size: 6vw;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+}
+.lineup ul li.small {
+  font-size: 2.6vw;
+  margin-bottom: 1vw;
+}
+.lineup .checkback {
+  margin-top: 40px;
+  color: #944ec4;
+  font-size: 13px;
+  letter-spacing: 1px;
+}

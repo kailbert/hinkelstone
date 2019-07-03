@@ -1,0 +1,18 @@
+//- make life easyier here
+mixin script-local(filename)
+	script(type="text/javascript" src= permalink + vendor + filename)
+mixin script-cdn(filename)
+	script(type="text/javascript" src= filename)
+mixin css-local(filename)
+	link(rel="stylesheet" type="text/css" href= permalink + vendor + filename)
+mixin css-cdn(filename)
+	link(rel="stylesheet" type="text/css" href=filename)
+mixin googlefont(fontname)
+	link(href="https://fonts.googleapis.com/css?family="+fontname rel="stylesheet")
+
+//- These Vendors will be incloded in the head before main.css
+
+//- These Vendors will be incloded in the Footer before closing body html
+mixin vendorFooter()
+	script(src=permalink +"build/js/rellax.min.js")
+	script(src=permalink +"build/js/custom.js")

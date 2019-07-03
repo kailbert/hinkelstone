@@ -1,0 +1,89 @@
+fadeInUp(time = 300ms ,delay = 0)
+	animation fadeInUp time ease
+	animation-fill-mode both
+	animation-delay delay
+@keyframes fadeInUp
+	0%
+		opacity 0
+		transform translate(0,2rem)
+	100%
+		opacity 1
+		transform translate(0,0)
+@keyframes fadeInLeft
+	0%
+		opacity 0
+		transform translate(-50px,0)
+	100%
+		opacity 1
+		transform translate(0,0)
+
+fadeIn(time = 300ms ,delay = 0)
+	animation fadeIn time ease
+	animation-fill-mode both
+	animation-delay delay
+@keyframes fadeIn
+	0%
+		opacity 0
+	100%
+		opacity 1
+.hero-container
+	.text *
+		for i in (1..10)
+			&:nth-child({i})
+				opacity 0
+				fadeInUp(600ms,0)
+				animation-delay (133ms * i)
+.hero .slider
+	opacity 0
+	animation fadeInLeft 600ms ease
+	animation-fill-mode both
+	animation-delay 400ms
+	+bp($bp1)
+		animation fadeInUp 600ms ease
+		animation-delay 0
+		animation-fill-mode both
+		
+.sr
+	.text
+		*
+			for i in (1..10)
+				&:nth-child({i})
+					opacity 0
+					transform translate(0,20px)
+					transition all 600ms ease (166ms * i)
+	.img
+		position relative
+		&::before
+			content ''
+			width 100%
+			height 100%
+			right 0
+			top 0
+			background $beige
+			transition all 800ms ease
+			position absolute
+	.img-2
+		position relative
+		&::before
+			content ''
+			width 100%
+			height 100%
+			right 0
+			bottom 0
+			background $beige
+			transition all 800ms ease 300ms
+			position absolute
+.sr.in-view
+	.text
+		*
+			for i in (1..10)
+				&:nth-child({i})
+					opacity 1
+					transform translate(0,0)
+	.img
+		&::before
+			width 0
+	.img-2
+		&::before
+			height 0
+			

@@ -1,0 +1,12 @@
+FTP autoupload to comfort-sl:
+  script:
+    - echo "hallo i am trying my best now – try two"
+    - rm -rf /var/lib/apt/lists/partial/*
+    - apt-get update
+    - apt-get clean
+    - apt-get install ncftp
+    - ls ./wwwroot
+    - ncftpput -R -v -u $FTP_USERNAME -p $FTP_PASSWORD home728383781.1and1-data.host /comfort-sl ./wwwroot/*
+
+  only:
+    - master
