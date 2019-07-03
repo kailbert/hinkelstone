@@ -102,3 +102,6 @@ gulp.task('default', ['jade', 'styles', 'js', 'assets', 'svg'], function () {
     gulp.watch("app/assets/**/*", ['assets-watch']);
     gulp.watch("app/assets/icons/*.svg", ['svg-watch']);
 });
+
+gulp.task('build', ['jade', 'styles', 'js', 'assets', 'svg'], function () {
+});
