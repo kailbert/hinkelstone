@@ -172,9 +172,7 @@ heroheight()
 		left 0
 	.stone
 		background-image url($assetspath/img/stone.png)
-		background-position center top
-		+bp($bp1)
-			background-position center 50vw
+		background-position center 13vw
 		background-repeat no-repeat
 		background-size contain
 		width 100%
@@ -183,6 +181,11 @@ heroheight()
 		bottom 0
 		left 0
 		z-index 100
+		transform scale(.6)
+		+bp($bp1)
+			width 100%
+			transform scale(1)
+			background-position center 50vw
 .hr
 	margin-top -70px
 	height 70px
@@ -190,7 +193,6 @@ heroheight()
 	z-index 105
 	position relative
 .lineup
-	max-width 1220px
 	padding 40px
 	+bp($bp1)
 		padding 20px
@@ -214,8 +216,9 @@ heroheight()
 			text-transform uppercase
 			letter-spacing 1vw
 		li.small
-			font-size 2.6vw
-			margin-bottom 1vw
+			font-size 4vw
+			line-height .9
+			margin-bottom .6vw
 	.checkback
 		margin-top 40px
 		color lighten(#7F3AAF,15%)
