@@ -417,7 +417,7 @@ img {
 .hr {
   margin-top: -70px;
   height: 70px;
-  background-image: linear-gradient(to bottom, transparent, #0b011e);
+  background-image: linear-gradient(to bottom, transparent 0%, #0b011e 100%);
   z-index: 105;
   position: relative;
 }
