@@ -461,3 +461,18 @@ img {
   font-size: 13px;
   letter-spacing: 1px;
 }
+.date {
+  font-size: 10vw;
+  margin-bottom: 4vw;
+  color: #2e9bfb;
+  line-height: 1;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .date {
+    background-image: linear-gradient(to right, #2e9bfb, #7f3aaf, #e329a4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+}
