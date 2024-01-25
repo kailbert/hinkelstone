@@ -475,3 +475,9 @@ img {
     text-fill-color: transparent;
   }
 }
+.maintenance {
+  width: 100svw;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+}
